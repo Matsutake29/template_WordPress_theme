@@ -1,0 +1,62 @@
+@use "../global" as *;
+
+// メディアクエリで非表示
+// max-width 以下
+.u-hidden-xsu {
+  @include global.mq("xsu") {
+    display: none;
+  }
+}
+
+.u-hidden-smu {
+  @include global.mq("smu") {
+    display: none;
+  }
+}
+
+.u-hidden-spu {
+  @include global.mq("spu") {
+    display: none;
+  }
+}
+
+.u-hidden-tbu {
+  @include global.mq("tbu") {
+    display: none;
+  }
+}
+
+// min-width 以上
+.u-hidden-xso {
+  @include global.mq("xso") {
+    display: none;
+  }
+}
+
+.u-hidden-smo {
+  @include global.mq("smo") {
+    display: none;
+  }
+}
+
+.u-hidden-spo {
+  @include global.mq("spo") {
+    display: none;
+  }
+}
+
+.u-hidden-tbo {
+  @include global.mq("tbo") {
+    display: none;
+  }
+}
+
+// タイマーで非表示
+// timerHidden
+.timerHidden {
+  display: none;
+}
+
+.timerVisible {
+  display: block;
+}

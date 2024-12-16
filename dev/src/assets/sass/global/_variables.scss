@@ -1,0 +1,71 @@
+// 変数
+// 色
+$c-base: #111;
+$c-main: #222;
+$c-accent: #333;
+$c-primary: #444;
+$c-text-black: #333;
+$c-text-white: #fff;
+$c-text-gray: #999;
+$c-bg-black: #333;
+$c-bg-white: #fff;
+$c-bg-gray: #999;
+
+// フォント
+$ff-base: "Noto Sans JP", "Meiryo", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif; // 日本語標準
+$fz-base: 16px; // ベースフォントサイズ
+$fw-base: 400; // ベースフォントウェイト
+$lh-base: 1.6; // ベース行間
+
+// ヘッダー高さ
+$header-height: 80px;
+$header-height-sp: 60px;
+
+// レイアウト幅
+$layout-width-canvas: 1440px; // キャンバス幅サイズ
+$layout-width-inner: 1060px; // インナー幅サイズ
+$layout-width-vw: 1060; // vw単位の幅
+
+// レイアウト
+$xs-width: 414px; // xsサイズ
+$sm-width: 576px; // smサイズ
+$sp-width: 768px; // スマホサイズ
+$tb-width: 1024px; // タブレットサイズ
+
+// ブレークポイント
+$breakpoints: (
+  // max-width 以下
+  "xsu": "screen and (max-width: #{$xs-width - 0.02px})",
+  "smu": "screen and (max-width: #{$sm-width - 0.02px})",
+  "spu": "screen and (max-width: #{$sp-width - 0.02px})",
+  "tbu": "screen and (max-width: #{$tb-width - 0.02px})",
+  // min-width 以上
+  "xso": "screen and (min-width: #{$xs-width})",
+  "smo": "screen and (min-width: #{$sm-width})",
+  "spo": "screen and (min-width: #{$sp-width})",
+  "pco": "screen and (min-width: #{$tb-width})",
+);
+
+// 重なり順の定義
+$layer: (
+  // ローディング
+  loading: 300,
+  // モーダル
+  modal: 100,
+  // ドロワー
+  drawer: 40,
+  // フローティング
+  floating: 30,
+  // ヘッダー
+  header: 20,
+  // フッター
+  footer: 10,
+  // デフォルト
+  default: 1
+);
+
+// ホバー時のtransitionの秒数
+$hover-transition: 300ms;
+
+// ホバー時のopacityに使用する値
+$opacity-07: 0.7;

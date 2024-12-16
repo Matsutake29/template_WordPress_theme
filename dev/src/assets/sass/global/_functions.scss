@@ -1,0 +1,12 @@
+// 関数
+
+// pxをremに変換
+@function rem($px, $basepx: 16px) {
+  @return $px / $basepx * 1rem;
+}
+
+// letter-spacing計算
+@function lsp($letter_spacing, $font_size) {
+
+	@return $letter_spacing / $font_size * 1em;
+}

@@ -1,0 +1,13 @@
+@use "./variables" as *;
+
+// メディアクエリー
+@mixin mq($breakpoint) {
+	@media #{map-get($breakpoints, $breakpoint)} {
+		@content;
+	}
+}
+
+//  重なり順
+@mixin z($z-index) {
+	z-index: map.get($layer, $z-index);
+}

@@ -1,0 +1,28 @@
+@use "../global" as *;
+
+body {
+  color: $text-color;
+  font-family: $ff-base;
+  font-size: $fz-base;
+  font-weight: $fw-base;
+}
+
+p {
+  line-height: $lh-base;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  opacity: 1;
+  transition: all $hover-transition ease;
+
+  &:hover {
+    opacity: $opacity-07;
+    cursor: pointer;
+  }
+}

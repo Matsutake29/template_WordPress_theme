@@ -1,0 +1,27 @@
+@use "../global" as *;
+
+.l-header {
+	position: relative;
+	width: 100%;
+	background: #fff;
+	top: 0;
+	left: 0;
+	height: $header-height;
+	z-index: map-get($layer, "header");
+
+  @include global.mq("tab") {
+    height: $header-height-sp;
+  }
+}
+
+.l-header__inner {
+  height: inherit;
+  max-width: $layout-width-inner;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
+
+  @include global.mq("tab") {
+    padding: 0 20px;
+  }
+}

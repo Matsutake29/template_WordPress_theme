@@ -1,0 +1,33 @@
+@use "../global" as *;
+
+.l-main {
+  margin-top: 160px;
+
+  @include global.mq("tab") {
+    margin-top: 90px;
+  }
+}
+
+.l-main__inner {
+  max-width: $layout-width-inner;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
+
+  @include global.mq("tab") {
+    padding: 0 20px;
+  }
+}
+
+.p-top__mv {
+
+}
+
+.p-top__mv-content {
+
+}
+
+.p-top__mv-inner {
+
+}
+

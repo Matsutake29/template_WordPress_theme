@@ -1,0 +1,19 @@
+@use "../global" as *;
+
+.l-footer {
+  position: relative;
+	width: 100%;
+	background: #fff;
+	z-index: map-get($layer, "footer");
+}
+
+.l-footer__inner {
+  max-width: $layout-width-inner;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
+
+  @include global.mq("tab") {
+    padding: 0 20px;
+  }
+}
