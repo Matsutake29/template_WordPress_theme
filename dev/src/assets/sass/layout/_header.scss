@@ -1,4 +1,4 @@
-@use "../global" as *;
+@use "../global" as global;
 
 .l-header {
 	position: relative;
@@ -6,22 +6,23 @@
 	background: #fff;
 	top: 0;
 	left: 0;
-	height: $header-height;
-	z-index: map-get($layer, "header");
+	height: global.$header-height;
+  @include global.z("header");
 
-  @include global.mq("tab") {
-    height: $header-height-sp;
+
+  @include global.mq("spu") {
+    height: global.$header-height-sp;
   }
 }
 
 .l-header__inner {
   height: inherit;
-  max-width: $layout-width-inner;
+  max-width: global.$layout-width-inner;
   width: 100%;
   margin: 0 auto;
   padding: 0 30px;
 
-  @include global.mq("tab") {
+  @include global.mq("spu") {
     padding: 0 20px;
   }
 }

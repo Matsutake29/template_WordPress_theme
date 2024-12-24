@@ -7,13 +7,17 @@ cd dev
 2. package.jsonの内容をインストール (初回のみ)
 npm install
 
-3. ファイルの監視、ブラウザの自動リロードを開始
+3. 全タスクを実行
+npx gulp
+
+個別にタスクを実行
+-ファイルの監視、ブラウザの自動リロードを開始
 npx gulp dev
 
-4. ビルドを実行
+-ビルドを実行
 npx gulp build
 
-5. 画像のwebp変換(任意)
+-画像のwebp変換(任意)
 npx gulp webp
 
 package.json記述内容メモ

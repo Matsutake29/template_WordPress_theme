@@ -1,4 +1,4 @@
-@use "../global" as *;
+@use "../global" as global;
 
 // mv
 // ====================================================
@@ -6,7 +6,7 @@
 .p-top__mv {
   margin-top: 160px;
 
-  @include global.mq("tab") {
+  @include global.mq("spu") {
     margin-top: 90px;
   }
 }
@@ -16,12 +16,12 @@
 }
 
 .p-top__mv-inner {
-  max-width: $layout-width-inner;
+  max-width: global.$layout-width-inner;
   width: 100%;
   margin: 0 auto;
   padding: 0 30px;
 
-  @include global.mq("tab") {
+  @include global.mq("spu") {
     padding: 0 20px;
   }
 }
