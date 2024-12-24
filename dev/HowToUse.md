@@ -1,8 +1,7 @@
-ターミナルに以下のコマンドを入力
-git clone https://github.com/Matsutake29/template_WordPress_theme .
+gulp 使用手順
+ターミナルに入力
 
-gulp導入手順
-1. チェンジディレクトリ
+1. チェンジディレクトリ (/dev)
 cd dev
 
 2. package.jsonの内容をインストール (初回のみ)
@@ -14,7 +13,7 @@ npx gulp dev
 4. ビルドを実行
 npx gulp build
 
-5. 画像のwebp変換
+5. 画像のwebp変換(任意)
 npx gulp webp
 
 package.json記述内容メモ
