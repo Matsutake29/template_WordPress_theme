@@ -17,9 +17,6 @@ npx gulp dev
 -ビルドを実行
 npx gulp build
 
--画像のwebp変換(任意)
-npx gulp webp
-
 package.json記述内容メモ
 {
   "devDependencies": {
