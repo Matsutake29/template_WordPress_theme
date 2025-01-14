@@ -43,16 +43,16 @@ $breakpoints: (
   "xsu": "screen and (max-width: #{($xs-width - 1px)})",
   "smu": "screen and (max-width: #{($sm-width - 1px)})",
   "spu": "screen and (max-width: #{($sp-width - 1px)})",
-  "pcu": "screen and (max-width: #{($tb-width - 1px)})",
-  "lgu": "screen and (max-width: #{($tb-width - 1px)})",
-  "xlu": "screen and (max-width: #{($tb-width - 1px)})",
+  "pcu": "screen and (max-width: #{($pc-width - 1px)})",
+  "lgu": "screen and (max-width: #{($lg-width - 1px)})",
+  "xlu": "screen and (max-width: #{($xl-width - 1px)})",
   // min-width 以上
   "xso": "screen and (min-width: #{$xs-width})",
   "smo": "screen and (min-width: #{$sm-width})",
   "spo": "screen and (min-width: #{$sp-width})",
-  "pco": "screen and (min-width: #{$tb-width})",
-  "lgo": "screen and (min-width: #{$tb-width})",
-  "xlo": "screen and (min-width: #{$tb-width})",
+  "pco": "screen and (min-width: #{$pc-width})",
+  "lgo": "screen and (min-width: #{$lg-width})",
+  "xlo": "screen and (min-width: #{$xl-width})",
 );
 
 // 重なり順の定義

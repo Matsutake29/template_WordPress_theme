@@ -1,14 +1,13 @@
-@use "sass:map"; // Sassのmapモジュールをインポート
 @use "./variables" as global;
 
 // メディアクエリー
-@mixin mq($breakpoint) {
-  @media #{map.get(global.$breakpoints, $breakpoint)} {
-    @content;
+@mixin mq($breakpoint : "pcu") {
+  @media #{map-get(global.$breakpoints, $breakpoint)} {
+      @content;
   }
 }
 
 // 重なり順
 @mixin z($z-index) {
-  z-index: map.get(global.$layer, $z-index);
+  z-index: map-get(global.$layer, $z-index);
 }

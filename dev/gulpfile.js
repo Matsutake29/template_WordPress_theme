@@ -43,7 +43,7 @@ function browserReload(done) {
 
 // HTMLの整形
 function formatHTML() {
-	return gulp.src("./src/assets/*.html")
+	return gulp.src("./src/*.html")
 	.pipe(htmlBeautify({
 		indent_size: 2,
 		indent_with_tabs: true,
@@ -54,7 +54,6 @@ function formatHTML() {
 // Sassのコンパイル & 圧縮
 function compileSass() {
 	return gulp.src("./src/assets/sass/**/*.scss")
-	.pipe(gulp.dest("../assets/sass/"))
 	.pipe(sass())
 	.pipe(postcss([autoprefixer(), cssSorter()]))
 	.pipe(mmq())

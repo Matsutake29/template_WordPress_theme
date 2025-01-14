@@ -21,19 +21,19 @@
 }
 
 .u-hidden-pcu {
-  @include global.mq("tbu") {
+  @include global.mq("pcu") {
     display: none;
   }
 }
 
 .u-hidden-lgu {
-  @include global.mq("tbu") {
+  @include global.mq("lgu") {
     display: none;
   }
 }
 
 .u-hidden-xlu {
-  @include global.mq("tbu") {
+  @include global.mq("xlu") {
     display: none;
   }
 }
@@ -58,19 +58,19 @@
 }
 
 .u-hidden-pco {
-  @include global.mq("tbo") {
+  @include global.mq("pco") {
     display: none;
   }
 }
 
 .u-hidden-lgo {
-  @include global.mq("tbo") {
+  @include global.mq("lgo") {
     display: none;
   }
 }
 
 .u-hidden-xlo {
-  @include global.mq("tbo") {
+  @include global.mq("xlo") {
     display: none;
   }
 }
