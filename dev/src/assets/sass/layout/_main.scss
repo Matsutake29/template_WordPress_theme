@@ -1,29 +1,25 @@
 @use "../global" as global;
 
 .l-main {
-  margin-top: 160px;
+  margin-top: global.$header-height;
 
   @include global.mq("spu") {
-    margin-top: 90px;
+    margin-top: global.$header-height-sp;
   }
 }
 
-.l-main__inner {
+.l-inner {
   max-width: global.$layout-width-inner;
   width: 100%;
   margin: 0 auto;
-  padding: 0 30px;
-
-  @include global.mq("spu") {
-    padding: 0 20px;
-  }
+  padding: 0 20px;
 }
 
 .p-top__mv {
 
 }
 
-.p-top__mv-content {
+.p-top__mv-container {
 
 }
 

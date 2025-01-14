@@ -14,6 +14,9 @@ $c-bg-gray: #999;
 
 // フォント
 $ff-base: "Noto Sans JP", "Meiryo", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif; // 日本語標準
+$ff-en: "Noto Sans JP", sans-serif; // 英語標準
+$ff-sub01: "Noto Sans JP", sans-serif;
+$ff-sub02: "Noto Sans JP", sans-serif;
 $fz-base: 16px; // ベースフォントサイズ
 $fw-base: 400; // ベースフォントウェイト
 $lh-base: 1.6; // ベース行間
@@ -24,27 +27,32 @@ $header-height-sp: 60px;
 
 // レイアウト幅
 $layout-width-canvas: 1440px; // キャンバス幅サイズ
-$layout-width-inner: 1060px; // インナー幅サイズ
-$layout-width-vw: 1060; // vw単位の幅
+$layout-width-inner: 1200px; // インナー幅サイズ
 
 // レイアウト
-$xs-width: 414px; // xsサイズ
+$xs-width: 425px; // xsサイズ
 $sm-width: 576px; // smサイズ
-$sp-width: 768px; // スマホサイズ
-$tb-width: 1024px; // タブレットサイズ
+$sp-width: 768px; // SPサイズ
+$pc-width: 900px; // PCサイズ
+$lg-width: 1200px; // lgサイズ
+$xl-width: 1440px; // xlサイズ
 
 // ブレークポイント
 $breakpoints: (
   // max-width 以下
-  "xsu": "screen and (max-width: #{($xs-width - 0.02px)})",
-  "smu": "screen and (max-width: #{($sm-width - 0.02px)})",
-  "spu": "screen and (max-width: #{($sp-width - 0.02px)})",
-  "tbu": "screen and (max-width: #{($tb-width - 0.02px)})",
+  "xsu": "screen and (max-width: #{($xs-width - 1px)})",
+  "smu": "screen and (max-width: #{($sm-width - 1px)})",
+  "spu": "screen and (max-width: #{($sp-width - 1px)})",
+  "pcu": "screen and (max-width: #{($tb-width - 1px)})",
+  "lgu": "screen and (max-width: #{($tb-width - 1px)})",
+  "xlu": "screen and (max-width: #{($tb-width - 1px)})",
   // min-width 以上
   "xso": "screen and (min-width: #{$xs-width})",
   "smo": "screen and (min-width: #{$sm-width})",
   "spo": "screen and (min-width: #{$sp-width})",
-  "tbo": "screen and (min-width: #{$tb-width})",
+  "pco": "screen and (min-width: #{$tb-width})",
+  "lgo": "screen and (min-width: #{$tb-width})",
+  "xlo": "screen and (min-width: #{$tb-width})",
 );
 
 // 重なり順の定義

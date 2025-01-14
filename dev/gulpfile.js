@@ -14,7 +14,7 @@ const htmlBeautify = require("gulp-html-beautify");
 function watch() {
 	gulp.watch("./src/assets/sass/**/*.scss", gulp.series(compileSass, browserReload));
 	gulp.watch("./src/assets/js/**/*.js", gulp.series(minJS, browserReload));
-	gulp.watch("./src/assets/img/**/*", gulp.series(copyImage, browserReload));
+	// gulp.watch("./src/assets/img/**/*", gulp.series(copyImage, browserReload));
 	gulp.watch("./src/**/*.html", gulp.series(formatHTML, browserReload));
 	gulp.watch("../**/*.php", browserReload);
 }
@@ -43,7 +43,7 @@ function browserReload(done) {
 
 // HTMLの整形
 function formatHTML() {
-	return gulp.src("./src/**/*.html")
+	return gulp.src("./src/assets/*.html")
 	.pipe(htmlBeautify({
 		indent_size: 2,
 		indent_with_tabs: true,
@@ -54,40 +54,41 @@ function formatHTML() {
 // Sassのコンパイル & 圧縮
 function compileSass() {
 	return gulp.src("./src/assets/sass/**/*.scss")
+	.pipe(gulp.dest("../assets/sass/"))
 	.pipe(sass())
 	.pipe(postcss([autoprefixer(), cssSorter()]))
 	.pipe(mmq())
-	.pipe(gulp.dest("../css/"))
+	// .pipe(gulp.dest("../assets/css/"))
 	.pipe(cleanCss())
 	.pipe(rename({
 		suffix: ".min"
 	}))
-	.pipe(gulp.dest("../css/"))
+	.pipe(gulp.dest("../assets/css/"))
 }
 
 // JSの圧縮
 function minJS() {
 	return gulp.src("./src/assets/js/**/*.js")
-	.pipe(gulp.dest("../js/"))
+	.pipe(gulp.dest("../assets/js/"))
 	.pipe(uglify())
 	.pipe(rename({
 		suffix: ".min"
 	}))
-	.pipe(gulp.dest("../js/"))
+	.pipe(gulp.dest("../assets/js/"))
 }
 
 // 画像の複製
-function copyImage() {
-	return gulp.src("./src/assets/img/**/*")
-	.pipe(gulp.dest("../img/"))
-}
+// function copyImage() {
+// 	return gulp.src("./src/assets/img/**/*")
+// 	.pipe(gulp.dest("../assets/img/"))
+// }
 
 // タスクの実行
 exports.dev = gulp.parallel(browserInit, watch);
-exports.build = gulp.parallel(formatHTML, compileSass, minJS, copyImage);
+exports.build = gulp.parallel(formatHTML, compileSass, minJS,);
 
 // 全てのタスクを実行
 exports.default = gulp.series(
-	gulp.parallel(formatHTML, compileSass, minJS, copyImage),
+	gulp.parallel(formatHTML, compileSass, minJS,),
   gulp.parallel(browserInit, watch),
 );
