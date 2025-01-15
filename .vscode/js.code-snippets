@@ -1,0 +1,139 @@
+{
+	"querySelector": {
+		"scope": "javascript",
+		"prefix": "qs",
+		"body": [
+			"document.querySelector('$1');"
+		]
+	},
+	"querySelectorAll": {
+		"scope": "javascript",
+		"prefix": "qsa",
+		"body": [
+			"document.querySelectorAll('$1');"
+		]
+	},
+	"forEach": {
+		"scope": "javascript",
+		"prefix": "fe",
+		"body": [
+			"$1.forEach(($2) => {",
+			"\t$3",
+			"});"
+		]
+	},
+	"classList": {
+		"scope": "javascript",
+		"prefix": "cl",
+		"body": [
+			"$1.classList"
+		]
+	},
+	"addEventListener": {
+		"scope": "javascript",
+		"prefix": "ade",
+		"body": [
+			"$1.addEventListener('$2',function($3){",
+			"\t$4",
+			"});"
+		]
+	},
+	"console": {
+		"scope": "javascript",
+		"prefix": "cl",
+		"body": [
+			"console.log($1);"
+		]
+	},
+	"swipers": {
+		"scope": "javascript",
+		"prefix": "temp_swipers",
+		"body": [
+			"const $1Swipers = document.querySelectorAll('$2');",
+			"if ($1Swipers) {",
+			"  Swipers.forEach((el) => {",
+			"    const swiper = new Swiper(el, {",
+			"      slidesPerView: 1,",
+			"      loop: true,",
+			"      spaceBetween: 20,",
+			"      speed: 800,",
+			"      autoplay: {",
+			"        delay: 1000,",
+			"        disableOnInteraction: false,",
+			"      },",
+			"      pagination: {",
+			"        el: '.swiper-pagination',",
+			"        clickable: true,",
+			"      },",
+			"      navigation: {",
+			"        nextEl: '.swiper-button-next',",
+			"        prevEl: '.swiper-button-prev',",
+			"      },",
+			"    });",
+			" });",
+			"}"
+		],
+		"description": "複数対応swiperテンプレート"
+	},
+	"swiper": {
+		"scope": "javascript",
+		"prefix": "temp_swiper",
+		"body": [
+			"const $1Swiper = document.querySelector('$2');",
+			"if ($1Swiper) {",
+			"    const swiper = new Swiper(el, {",
+			"    slidesPerView: 1,",
+			"    loop: true,",
+			"    spaceBetween: 20,",
+			"    speed: 800,",
+			"    autoplay: {",
+			"      delay: 1000,",
+			"      disableOnInteraction: false,",
+			"    },",
+			"    pagination: {",
+			"      el: '.swiper-pagination',",
+			"      clickable: true,",
+			"    },",
+			"    navigation: {",
+			"      nextEl: '.swiper-button-next',",
+			"      prevEl: '.swiper-button-prev',",
+			"    },",
+			"  });",
+			"}"
+		],
+		"description": "swiperテンプレート"
+	},
+	"tempHamburger": {
+		"scope": "javascript",
+		"prefix": "temp_hamburger",
+		"body": [
+			"$('#header').load('./parts/header.html', function() {",
+			"  $('.hamburger-btn').on('click', function() {",
+			"    $(this).toggleClass('active');",
+			"    $('.burger-menu-container').toggleClass('active');",
+			"    $('body').toggleClass('no-scroll');",
+			"    });",
+			"  $('.burger-menu-container a').on('click', function() {",
+			"    $('.hamburger-btn').removeClass('active');",
+			"    $('.burger-menu-container').removeClass('active');",
+			"    $('body').removeClass('no-scroll');",
+			"  });",
+			"});",
+			"// キーボードイベントの処理",
+			"$(document).on('keydown', function(e) {",
+			"  // ESCキーが押されたとき",
+			"  if (e.key === 'Escape') {",
+			"    if ($('.hamburger-btn').hasClass('active')) {",
+			"      $('.hamburger-btn').removeClass('active');",
+			"      $('.burger-menu-container').removeClass('active');",
+			"      $('body').removeClass('no-scroll');",
+			"    }",
+			"  }",
+			"});"
+		],
+		"description": [
+			"ハンバーガーのテンプレート",
+			"jQuery使用のた目注意"
+			]
+	},
+}

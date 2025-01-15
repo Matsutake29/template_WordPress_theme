@@ -1,29 +1,25 @@
-@use "../global" as global;
+@use "../global" as gb;
 
 .l-main {
-  margin-top: global.$header-height;
+  margin-top: gb.$header-height;
 
-  @include global.mq(spu) {
-    margin-top: global.$header-height-sp;
+  @include gb.mq(spu) {
+    margin-top: gb.$header-height-sp;
   }
 }
 
 .l-inner {
-  max-width: global.$layout-width-inner;
+  max-width: gb.$layout-width-inner;
   width: 100%;
   margin: 0 auto;
   padding: 0 20px;
 }
 
 .p-top__mv {
-
 }
 
 .p-top__mv-container {
-
 }
 
 .p-top__mv-inner {
-
 }
-

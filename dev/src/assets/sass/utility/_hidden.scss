@@ -1,76 +1,76 @@
-@use "../global" as global;
+@use "../global" as gb;
 
 // メディアクエリで非表示
 // max-width 以下
 .u-hidden-xsu {
-  @include global.mq(xsu) {
+  @include gb.mq(xsu) {
     display: none;
   }
 }
 
 .u-hidden-smu {
-  @include global.mq(smu) {
+  @include gb.mq(smu) {
     display: none;
   }
 }
 
 .u-hidden-spu {
-  @include global.mq(spu) {
+  @include gb.mq(spu) {
     display: none;
   }
 }
 
 .u-hidden-pcu {
-  @include global.mq(pcu) {
+  @include gb.mq(pcu) {
     display: none;
   }
 }
 
 .u-hidden-lgu {
-  @include global.mq(lgu) {
+  @include gb.mq(lgu) {
     display: none;
   }
 }
 
 .u-hidden-xlu {
-  @include global.mq(xlu) {
+  @include gb.mq(xlu) {
     display: none;
   }
 }
 
 // min-width 以上
 .u-hidden-xso {
-  @include global.mq(xso) {
+  @include gb.mq(xso) {
     display: none;
   }
 }
 
 .u-hidden-smo {
-  @include global.mq(smo) {
+  @include gb.mq(smo) {
     display: none;
   }
 }
 
 .u-hidden-spo {
-  @include global.mq(spo) {
+  @include gb.mq(spo) {
     display: none;
   }
 }
 
 .u-hidden-pco {
-  @include global.mq(pco) {
+  @include gb.mq(pco) {
     display: none;
   }
 }
 
 .u-hidden-lgo {
-  @include global.mq(lgo) {
+  @include gb.mq(lgo) {
     display: none;
   }
 }
 
 .u-hidden-xlo {
-  @include global.mq(xlo) {
+  @include gb.mq(xlo) {
     display: none;
   }
 }

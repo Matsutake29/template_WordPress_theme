@@ -1,15 +1,14 @@
-@use "../global" as global;
+@use "../global" as gb;
 
 .l-footer {
-	width: 100%;
-	background: #fff;
-  @include global.z(footer);
+  width: 100%;
+  background: gb.$c-bg-white;
+  @include gb.z(footer);
 }
 
 .l-footer__inner {
-  max-width: global.$layout-width-inner;
+  max-width: gb.$layout-width-inner;
   width: 100%;
   margin: 0 auto;
   padding: 0 20px;
 }
-

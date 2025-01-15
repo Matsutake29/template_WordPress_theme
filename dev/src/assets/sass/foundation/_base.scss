@@ -1,14 +1,14 @@
-@use "../global" as global;
+@use "../global" as gb;
 
 body {
-  color: global.$c-text;
-  font-family: global.$ff-base;
-  font-size: global.$fz-base;
-  font-weight: global.$fw-base;
+  color: gb.$c-text;
+  font-family: gb.$ff-base;
+  font-size: gb.$fz-base;
+  font-weight: gb.$fw-base;
 }
 
 p {
-  line-height: global.$lh-base;
+  line-height: gb.$lh-base;
 }
 
 img {
@@ -19,10 +19,10 @@ img {
 a {
   color: inherit;
   opacity: 1;
-  transition: all global.$hover-transition ease;
+  transition: all gb.$hover-transition ease;
 
   &:hover {
-    opacity: global.$opacity-07;
+    opacity: gb.$opacity-07;
     cursor: pointer;
   }
 }

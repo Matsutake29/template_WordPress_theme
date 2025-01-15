@@ -1,0 +1,285 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+dl,
+li,
+dt,
+dd,
+p,
+div,
+span,
+img,
+a,
+table,
+tr,
+th,
+td,
+small,
+button,
+time,
+figure {
+	border: 0;
+	font: inherit;
+	font-size: 100%;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+
+html {
+	line-height: 1;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+li,
+dd {
+	list-style-type: none;
+}
+
+header,
+footer,
+nav,
+section,
+article,
+main,
+aside,
+figure,
+figcaption {
+	display: block;
+}
+
+img {
+	border: none;
+	vertical-align: bottom;
+}
+
+a {
+	cursor: pointer;
+	text-decoration: none;
+}
+
+body {
+	color: #333;
+	font-family: "Noto Sans JP", "Meiryo", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+}
+
+p {
+	line-height: 1.6;
+}
+
+img {
+	height: auto;
+	width: 100%;
+}
+
+a {
+	color: inherit;
+	opacity: 1;
+	transition: all 0.3s ease;
+}
+
+a:hover {
+	cursor: pointer;
+	opacity: 0.7;
+}
+
+.l-footer {
+	background: #fff;
+	width: 100%;
+	z-index: 10;
+}
+
+.l-footer__inner {
+	margin: 0 auto;
+	max-width: 1200px;
+	padding: 0 20px;
+	width: 100%;
+}
+
+.l-header {
+	background: #fff;
+	height: 80px;
+	left: 0;
+	position: relative;
+	top: 0;
+	width: 100%;
+	z-index: 20;
+}
+
+.l-header__inner {
+	height: inherit;
+	margin: 0 auto;
+	max-width: 1200px;
+	padding: 0 20px;
+	width: 100%;
+}
+
+.l-main {
+	margin-top: 80px;
+}
+
+.l-inner {
+	margin: 0 auto;
+	max-width: 1200px;
+	padding: 0 20px;
+	width: 100%;
+}
+
+.p-top__mv {
+	padding-top: 100px;
+}
+
+.p-top__mv-inner {
+	margin: 0 auto;
+	max-width: 1200px;
+	padding: 0 20px;
+	width: 100%;
+}
+
+.u-timerHidden {
+	display: none;
+}
+
+.u-timerVisible {
+	display: block;
+}
+
+.u-ib {
+	display: inline-block;
+}
+
+@media screen and (min-width: 425px) {
+
+.u-hidden-xso {
+	display: none;
+}
+
+}
+
+@media screen and (min-width: 576px) {
+
+.u-hidden-smo {
+	display: none;
+}
+
+}
+
+@media screen and (min-width: 768px) {
+
+.u-hidden-spo {
+	display: none;
+}
+
+.u-ib-pc {
+	display: inline-block;
+}
+
+}
+
+@media screen and (min-width: 900px) {
+
+.u-hidden-pco {
+	display: none;
+}
+
+}
+
+@media screen and (min-width: 1200px) {
+
+.u-hidden-lgo {
+	display: none;
+}
+
+}
+
+@media screen and (min-width: 1440px) {
+
+.u-hidden-xlo {
+	display: none;
+}
+
+}
+
+@media screen and (max-width: 1439px) {
+
+.u-hidden-xlu {
+	display: none;
+}
+
+}
+
+@media screen and (max-width: 1199px) {
+
+.u-hidden-lgu {
+	display: none;
+}
+
+}
+
+@media screen and (max-width: 899px) {
+
+.u-hidden-pcu {
+	display: none;
+}
+
+}
+
+@media screen and (max-width: 767px) {
+
+.l-header {
+	height: 60px;
+}
+
+.l-main {
+	margin-top: 60px;
+}
+
+.p-top__mv {
+	padding-top: 40px;
+}
+
+.u-hidden-spu {
+	display: none;
+}
+
+.u-ib-sp {
+	display: inline-block;
+}
+
+}
+
+@media screen and (max-width: 575px) {
+
+.u-hidden-smu {
+	display: none;
+}
+
+}
+
+@media screen and (max-width: 424px) {
+
+.u-hidden-xsu {
+	display: none;
+}
+
+}
+

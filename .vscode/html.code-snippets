@@ -1,0 +1,126 @@
+{
+	"picture": {
+		"scope": "html",
+		"prefix": "pic",
+		"body": [
+			"<picture>",
+			"\t<source media='(max-width:899px)' srcset='$1' />",
+			"\t<img src='$2' alt='$3' />",
+			"</picture>"
+		]
+	},
+	"php shortcode": {
+		"scope": "html",
+		"prefix": "php",
+		"body": [
+			"<?php $1 ?>"
+		]
+	},
+	"wp directory": {
+		"scope": "html",
+		"prefix": "wpdirec",
+		"body": [
+			"<?php echo get_template_directory_uri(); ?>$1"
+		]
+	},
+	"wp home": {
+		"scope": "html",
+		"prefix": "wphome",
+		"body": [
+			"<?php echo home_url('/$1'); ?>$2"
+		]
+	},
+	"wp get header": {
+		"scope": "html",
+		"prefix": "gh",
+		"body": [
+			"<?php get_header(); ?>"
+		]
+	},
+	"wp get footer": {
+		"scope": "html",
+		"prefix": "gf",
+		"body": [
+			"<?php get_footer(); ?>"
+		]
+	},
+	"wp get field": {
+		"scope": "html",
+		"prefix": "gfi",
+		"body": [
+			"<?php get_field('$1'); ?>"
+		]
+	},
+	"wp the field": {
+		"scope": "html",
+		"prefix": "tfi",
+		"body": [
+			"<?php the_field('$1'); ?>"
+		]
+	},
+	"image": {
+		"scope": "html",
+		"prefix": "img",
+		"body": [
+			"<img src='$1' alt='$2' width='$3' height='$4' loading='lazy'>"
+		]
+	},
+	"wp do short code": {
+		"scope": "html",
+		"prefix": "ds",
+		"body": [
+			"<?php echo do_shortcode('$1'); ?>"
+		]
+	},
+	"swiper template": {
+		"scope": "html",
+		"prefix": "temp_siwper",
+		"body": [
+			"<div class='slider-container'>",
+			"  <div class='swiper'>",
+			"    <div class='swiper-wrapper'>",
+			"      <div class='swiper-slide'>",
+			"      </div>",
+			"    </div>",
+			"  </div>",
+			"  <div class='swiper-button-prev'></div>",
+			"  <div class='swiper-button-next'></div>",
+			"  <div class='swiper-pagination'></div>",
+			"</div>"
+		],
+		"description": "swiperテンプレートコード"
+	},
+	"hamburger template": {
+		"scope": "html",
+		"prefix": "temp_hamburger",
+		"body": [
+			"<div class='hamburger-btn sp'>",
+        	"  <div class='lines-container'>",
+        	"    <span></span><span></span><span></span>",
+        	"  </div>",
+        	"  <div class='burger-menu-container sp'>",
+        	"    <ul class='burger-nav'>",
+            "      <li class='link'><a href='#'></a></li>",
+        	"    </ul>",
+        	"  </div>",
+			"</div>"
+		],
+		"description": "ハンバーガーメニューテンプレートコード"
+	},
+	"wp-pagenavi template": {
+		"scope": "html",
+		"prefix": "temp_wp-pagenavi",
+		"body": [
+			"<div class='wp-pagenavi' role='navigation'>",
+        	"  <a class='previouspostslink' rel='prev' aria-label='前のページ' href=''>テキスト</a>",
+        	"  <a class='page smaller' title='ページ 1' href=''>1</a>",
+        	"  <span aria-current='page' class='current'>2</span>",
+        	"  <a class='page larger' title='ページ 3' href=''>3</a>",
+        	"  <span class='extend'>...</span>",
+            "  <a class='nextpostslink' rel='next' aria-label='次のページ' href=''>テキスト</a>",
+        	"  <a class='last' aria-label='Last Page' href=''>4 </a>",
+        	"</div>"
+		],
+		"description": "wp-pagenaviテンプレートコード"
+	},
+}

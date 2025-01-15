@@ -1,17 +1,17 @@
-@use "../global" as global;
+@use "../global" as gb;
 
 .u-ib {
   display: inline-block;
 }
 
 .u-ib-sp {
-  @include global.mq(spu) {
+  @include gb.mq(spu) {
     display: inline-block;
   }
 }
 
 .u-ib-pc {
-  @include global.mq(spo) {
+  @include gb.mq(spo) {
     display: inline-block;
   }
 }

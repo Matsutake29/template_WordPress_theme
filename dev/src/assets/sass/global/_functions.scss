@@ -1,1 +1,6 @@
 // 関数
+
+// px → rem change
+@function rem($pxrem, $baserem: 16) {
+  @return calc($pxrem / $baserem) * 1rem;
+}

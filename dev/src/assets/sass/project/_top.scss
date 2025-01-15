@@ -1,4 +1,4 @@
-@use "../global" as global;
+@use "../global" as gb;
 
 // mv
 // ====================================================
@@ -6,17 +6,16 @@
 .p-top__mv {
   padding-top: 100px;
 
-  @include global.mq(spu) {
+  @include gb.mq(spu) {
     padding-top: 40px;
   }
 }
 
 .p-top__mv-container {
-
 }
 
 .p-top__mv-inner {
-  max-width: global.$layout-width-inner;
+  max-width: gb.$layout-width-inner;
   width: 100%;
   margin: 0 auto;
   padding: 0 20px;

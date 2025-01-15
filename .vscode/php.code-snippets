@@ -1,0 +1,87 @@
+{
+	"php shortcode": {
+		"scope": "php",
+		"prefix": "php",
+		"body": [
+			"<?php $1 ?>"
+		]
+	},
+	"wp directory": {
+		"scope": "php",
+		"prefix": "wpdirec",
+		"body": [
+			"echo get_template_directory_uri();"
+		]
+	},
+	"wp home": {
+		"scope": "php",
+		"prefix": "wphome",
+		"body": [
+			"echo home_url('/$1');"
+		]
+	},
+	"get header": {
+		"scope": "php",
+		"prefix": "gh",
+		"body": [
+			"get_header();"
+		]
+	},
+	"get footer": {
+		"scope": "php",
+		"prefix": "gf",
+		"body": [
+			"get_footer();"
+		]
+	},
+	"post loop": {
+		"scope": "php",
+		"prefix": "pl",
+		"body": [
+			"\\$args = array(",
+			"  'post_type' => '$1',",
+			"  'posts_per_page' => $2,",
+			"  ${3:'paged' => \\$paged,}",
+			");",
+			"\\$${4:custom}_query = new WP_Query(\\$args);",
+			"if (\\$${4:custom}_query->have_posts()) :",
+            "  while (\\$${4:custom}_query->have_posts()) : \\$${4:custom}_query->the_post();"
+		],
+		"description": "post loop template"
+	},
+	"category post loop": {
+		"scope": "php",
+		"prefix": "cpl",
+		"body": [
+			"\\$category_name = isset(\\$_GET['category_name']) ? \\$_GET['category_name'] : '';",
+			"if (!empty(\\$category_name)) {",
+			  "  \\$args = array(",
+				"    'post_type' => '$1',",
+				"    'posts_per_page' => $2,",
+				"    'category_name' => \\$category_name,",
+				"    ${3:'paged' => \\$paged,}",
+			  "  );",
+			"} else {",
+			  "  \\$args = array(",
+				"    'post_type' => '$1',",
+				"    'posts_per_page' => $2,",
+				"    ${3:'paged' => \\$paged,}",
+			  "  );",
+			"}",
+			"\\$${4:custom}_query = new WP_Query(\\$args);",
+			"if (\\$${4:custom}_query->have_posts()) :",
+			"  while (\\$${4:custom}_query->have_posts()) : \\$${4:custom}_query->the_post();"
+		],
+		"description": "category post loop"
+	},
+	"end loop": {
+		"scope": "php",
+		"prefix": "el",
+		"body": [
+			"  endwhile;",
+            "  wp_reset_postdata();",
+          "endif;"
+		],
+		"description": "end post loop"
+	},
+}

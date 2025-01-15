@@ -1,22 +1,22 @@
-@use "../global" as global;
+@use "../global" as gb;
 
 .l-header {
   width: 100%;
-	background: #fff;
-	position: relative;
-	top: 0;
-	left: 0;
-	height: global.$header-height;
-  @include global.z(header);
+  background: gb.$c-bg-white;
+  position: relative;
+  top: 0;
+  left: 0;
+  height: gb.$header-height;
+  @include gb.z(header);
 
-  @include global.mq(spu) {
-    height: global.$header-height-sp;
+  @include gb.mq(spu) {
+    height: gb.$header-height-sp;
   }
 }
 
 .l-header__inner {
   height: inherit;
-  max-width: global.$layout-width-inner;
+  max-width: gb.$layout-width-inner;
   width: 100%;
   margin: 0 auto;
   padding: 0 20px;
