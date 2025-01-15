@@ -1,13 +1,14 @@
 @use "./variables" as global;
+@use "sass:map";
 
 // メディアクエリー
-@mixin mq($breakpoint : "pcu") {
-  @media #{map-get(global.$breakpoints, $breakpoint)} {
+@mixin mq($bp : pcu) {
+  @media #{map.get(global.$breakpoints, $bp)} {
       @content;
   }
 }
 
 // 重なり順
-@mixin z($z-index) {
-  z-index: map-get(global.$layer, $z-index);
+@mixin z($zi) {
+  z-index: #{map.get(global.$layer, $zi)};
 }

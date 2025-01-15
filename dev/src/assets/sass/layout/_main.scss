@@ -3,7 +3,7 @@
 .l-main {
   margin-top: global.$header-height;
 
-  @include global.mq("spu") {
+  @include global.mq(spu) {
     margin-top: global.$header-height-sp;
   }
 }

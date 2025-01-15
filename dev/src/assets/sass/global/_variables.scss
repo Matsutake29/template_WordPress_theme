@@ -40,38 +40,38 @@ $xl-width: 1440px; // xlサイズ
 // ブレークポイント
 $breakpoints: (
   // max-width 以下
-  "xsu": "screen and (max-width: #{($xs-width - 1px)})",
-  "smu": "screen and (max-width: #{($sm-width - 1px)})",
-  "spu": "screen and (max-width: #{($sp-width - 1px)})",
-  "pcu": "screen and (max-width: #{($pc-width - 1px)})",
-  "lgu": "screen and (max-width: #{($lg-width - 1px)})",
-  "xlu": "screen and (max-width: #{($xl-width - 1px)})",
+  xsu: "screen and (max-width: #{($xs-width - 1px)})",
+  smu: "screen and (max-width: #{($sm-width - 1px)})",
+  spu: "screen and (max-width: #{($sp-width - 1px)})",
+  pcu: "screen and (max-width: #{($pc-width - 1px)})",
+  lgu: "screen and (max-width: #{($lg-width - 1px)})",
+  xlu: "screen and (max-width: #{($xl-width - 1px)})",
   // min-width 以上
-  "xso": "screen and (min-width: #{$xs-width})",
-  "smo": "screen and (min-width: #{$sm-width})",
-  "spo": "screen and (min-width: #{$sp-width})",
-  "pco": "screen and (min-width: #{$pc-width})",
-  "lgo": "screen and (min-width: #{$lg-width})",
-  "xlo": "screen and (min-width: #{$xl-width})",
-);
+  xso: "screen and (min-width: #{$xs-width})",
+  smo: "screen and (min-width: #{$sm-width})",
+  spo: "screen and (min-width: #{$sp-width})",
+  pco: "screen and (min-width: #{$pc-width})",
+  lgo: "screen and (min-width: #{$lg-width})",
+  xlo: "screen and (min-width: #{$xl-width})",
+) !default;
 
 // 重なり順の定義
 $layer: (
   // ローディング
-  "loading": 300,
+  loading: 300,
   // モーダル
-  "modal": 100,
+  modal: 100,
   // ドロワー
-  "drawer": 40,
+  drawer: 40,
   // フローティング
-  "floating": 30,
+  floating: 30,
   // ヘッダー
-  "header": 20,
+  header: 20,
   // フッター
-  "footer": 10,
+  footer: 10,
   // デフォルト
-  "default": 1
-);
+  default: 1
+) !default;
 
 // ホバー時のtransitionの秒数
 $hover-transition: 0.3s;

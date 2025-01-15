@@ -3,7 +3,7 @@
 .l-footer {
 	width: 100%;
 	background: #fff;
-  @include global.z("footer");
+  @include global.z(footer);
 }
 
 .l-footer__inner {

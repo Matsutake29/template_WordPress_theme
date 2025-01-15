@@ -14,7 +14,7 @@ const htmlBeautify = require("gulp-html-beautify");
 function watch() {
 	gulp.watch("./src/assets/sass/**/*.scss", gulp.series(compileSass, browserReload));
 	gulp.watch("./src/assets/js/**/*.js", gulp.series(minJS, browserReload));
-	// gulp.watch("./src/assets/img/**/*", gulp.series(copyImage, browserReload));
+	gulp.watch("./src/assets/img/**/*", gulp.series(copyImage, browserReload));
 	gulp.watch("./src/**/*.html", gulp.series(formatHTML, browserReload));
 	gulp.watch("../**/*.php", browserReload);
 }
@@ -57,7 +57,7 @@ function compileSass() {
 	.pipe(sass())
 	.pipe(postcss([autoprefixer(), cssSorter()]))
 	.pipe(mmq())
-	// .pipe(gulp.dest("../assets/css/"))
+	.pipe(gulp.dest("../assets/css/"))
 	.pipe(cleanCss())
 	.pipe(rename({
 		suffix: ".min"
@@ -77,17 +77,17 @@ function minJS() {
 }
 
 // 画像の複製
-// function copyImage() {
-// 	return gulp.src("./src/assets/img/**/*")
-// 	.pipe(gulp.dest("../assets/img/"))
-// }
+function copyImage() {
+	return gulp.src("./src/assets/img/**/*")
+	.pipe(gulp.dest("../assets/img/"))
+}
 
 // タスクの実行
 exports.dev = gulp.parallel(browserInit, watch);
-exports.build = gulp.parallel(formatHTML, compileSass, minJS,);
+exports.build = gulp.parallel(formatHTML, compileSass, minJS, copyImage);
 
 // 全てのタスクを実行
 exports.default = gulp.series(
-	gulp.parallel(formatHTML, compileSass, minJS,),
+	gulp.parallel(formatHTML, compileSass, minJS, copyImage),
   gulp.parallel(browserInit, watch),
 );

@@ -5,13 +5,13 @@
 }
 
 .u-ib-sp {
-  @include global.mq("spu") {
+  @include global.mq(spu) {
     display: inline-block;
   }
 }
 
 .u-ib-pc {
-  @include global.mq("spo") {
+  @include global.mq(spo) {
     display: inline-block;
   }
 }
