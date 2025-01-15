@@ -1,0 +1,38 @@
+{
+	"global-media-query": {
+    "prefix": "mq",
+    "body": [
+        "@include gb.mq(){",
+        "\t$1",
+        "}",
+    ],
+    "description": "メディアクエリポイントの設定"
+	},
+
+  "hover":{
+		"scope": "scss",
+		"prefix": "hov",
+		"body": [
+			"@include gb.hover {",
+			"\t$1",
+			"}"
+		]
+	},
+
+  "layer": {
+    "prefix": "z",
+    "body": [
+        "@include gb.z($1);"
+    ],
+    "description": "重なり順の設定"
+	},
+
+	"fontset": {
+		"scope": "scss",
+		"prefix": "fs",
+		"body": [
+			"@include gb.font(gb.rem($1),$2,gb.rem($3),${4:em});"
+		],
+		"description": "modules fontset"
+	},
+}

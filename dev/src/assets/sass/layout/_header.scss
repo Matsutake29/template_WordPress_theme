@@ -9,7 +9,7 @@
   height: gb.$header-height;
   @include gb.z(header);
 
-  @include gb.mq(spu) {
+  @include gb.mq() {
     height: gb.$header-height-sp;
   }
 }

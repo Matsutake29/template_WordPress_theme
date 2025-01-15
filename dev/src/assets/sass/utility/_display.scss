@@ -5,13 +5,13 @@
 }
 
 .u-ib-sp {
-  @include gb.mq(spu) {
+  @include gb.mq(pcu) {
     display: inline-block;
   }
 }
 
 .u-ib-pc {
-  @include gb.mq(spo) {
+  @include gb.mq(pco) {
     display: inline-block;
   }
 }

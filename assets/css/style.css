@@ -189,16 +189,16 @@ a:hover {
 	display: none;
 }
 
-.u-ib-pc {
-	display: inline-block;
-}
-
 }
 
 @media screen and (min-width: 900px) {
 
 .u-hidden-pco {
 	display: none;
+}
+
+.u-ib-pc {
+	display: inline-block;
 }
 
 }
@@ -237,14 +237,6 @@ a:hover {
 
 @media screen and (max-width: 899px) {
 
-.u-hidden-pcu {
-	display: none;
-}
-
-}
-
-@media screen and (max-width: 767px) {
-
 .l-header {
 	height: 60px;
 }
@@ -257,12 +249,20 @@ a:hover {
 	padding-top: 40px;
 }
 
-.u-hidden-spu {
+.u-hidden-pcu {
 	display: none;
 }
 
 .u-ib-sp {
 	display: inline-block;
+}
+
+}
+
+@media screen and (max-width: 767px) {
+
+.u-hidden-spu {
+	display: none;
 }
 
 }

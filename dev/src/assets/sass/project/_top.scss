@@ -6,7 +6,7 @@
 .p-top__mv {
   padding-top: 100px;
 
-  @include gb.mq(spu) {
+  @include gb.mq() {
     padding-top: 40px;
   }
 }

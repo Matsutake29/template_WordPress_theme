@@ -3,7 +3,7 @@
 .l-main {
   margin-top: gb.$header-height;
 
-  @include gb.mq(spu) {
+  @include gb.mq() {
     margin-top: gb.$header-height-sp;
   }
 }
